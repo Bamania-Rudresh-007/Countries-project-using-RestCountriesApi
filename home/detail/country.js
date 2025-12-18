@@ -18,6 +18,19 @@ const theameChanger = document.querySelector(".mode");
 const theameIcon = document.getElementById("theameIcon");
 const theameBtn = document.querySelector(".buttonWraper")
 let borderCountriesPack = [];
+
+window.addEventListener("DOMContentLoaded", () => {
+    if (localStorage.getItem("currentTheame") == "Dark") {
+        document.body.classList.toggle("theameChanger");
+        mode.innerText = "Light mode";
+        theameChanger.children[0].src = "sunny-outline.svg";
+    }
+    else{
+        mode.innerText = "Dark mode";
+        theameChanger.children[0].src = "moon-outline.svg";
+    }
+});
+
 const res = fetch(`https://restcountries.com/v3.1/name/${countryNameInfo}`);
 
 res
@@ -58,9 +71,9 @@ theameBtn.addEventListener("click", ()=>{
 
     if (isDark) {
         theameChanger.innerText = "Light mode";
-        theameIcon.src = "/Icons/sunny-outline.svg";
+        theameIcon.src = "/home/sunny-outline.svg";
     } else {
         theameChanger.innerText = "Dark mode";
-        theameIcon.src = "/Icons/moon-outline.svg";
+        theameIcon.src = "/home/moon-outline.svg";
     }
 })

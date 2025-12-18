@@ -11,11 +11,11 @@ window.addEventListener("DOMContentLoaded", () => {
     if (localStorage.getItem("currentTheame") == "Dark") {
         body.classList.toggle("theameChanger");
         mode.innerText = "Light mode";
-        theameChanger.children[0].src = "../Icons/sunny-outline.svg";
+        theameChanger.children[0].src = "sunny-outline.svg";
     }
     else{
         mode.innerText = "Dark mode";
-        theameChanger.children[0].src = "../Icons/moon-outline.svg";
+        theameChanger.children[0].src = "moon-outline.svg";
     }
 });
 
@@ -74,11 +74,11 @@ theameChanger.addEventListener("click", () => {
     body.classList.toggle("theameChanger");
     if (mode.innerText == "Dark mode") {
         mode.innerText = "Light mode";
-        theameChanger.children[0].src = "../Icons/sunny-outline.svg";
+        theameChanger.children[0].src = "sunny-outline.svg";
         localStorage.setItem("currentTheame", "Dark");
     } else {
         mode.innerText = "Dark mode";
-        theameChanger.children[0].src = "../Icons/moon-outline.svg";
+        theameChanger.children[0].src = "moon-outline.svg";
         localStorage.setItem("currentTheame", "Light");
     }
 });

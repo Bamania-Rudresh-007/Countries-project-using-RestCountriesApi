@@ -69,6 +69,7 @@ header {
     align-items: center;
     border-radius: 8px;
     background-color: var(--elements-color);
+    overflow: hidden;
 }
 
 .search-filter-functionality .search img {
@@ -101,6 +102,7 @@ header {
     cursor: pointer;
     background-color: var(--elements-color);
     color: var(--text-color);
+    border-radius: 8px;
 }
 
 main {
@@ -216,12 +218,14 @@ a {
 
     .filter {
         width: 60vw;
+        height: 8vh;
     }
 
     #selectField {
         width: 100%;
         background-color: var(--elements-color);
         color: var(--text-color);
+        height: 8vh;
     }
 
     .cardsContainer {
