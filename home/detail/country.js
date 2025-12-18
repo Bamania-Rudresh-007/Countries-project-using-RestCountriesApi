@@ -23,11 +23,11 @@ window.addEventListener("DOMContentLoaded", () => {
     if (localStorage.getItem("currentTheame") == "Dark") {
         document.body.classList.toggle("theameChanger");
         mode.innerText = "Light mode";
-        theameChanger.children[0].src = "/home/sunny-outline.svg";
+        theameChanger.children[0].src = "../sunny-outline.svg";
     }
     else{
         mode.innerText = "Dark mode";
-        theameChanger.children[0].src = "/home/moon-outline.svg";
+        theameChanger.children[0].src = "../moon-outline.svg";
     }
 });
 
@@ -71,9 +71,9 @@ theameBtn.addEventListener("click", ()=>{
 
     if (isDark) {
         theameChanger.innerText = "Light mode";
-        theameIcon.src = "/home/sunny-outline.svg";
+        theameIcon.src = "../sunny-outline.svg";
     } else {
         theameChanger.innerText = "Dark mode";
-        theameIcon.src = "/home/moon-outline.svg";
+        theameIcon.src = "../moon-outline.svg";
     }
 })
