@@ -1,0 +1,239 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --background-color: white;
+    --elements-color: white;
+    --text-color: black;
+    --filter-icons: invert(0);
+}
+
+body {
+    height: 100vh;
+    width: 98vw;
+    font-family: "Nunito Sans";
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.theameChanger {
+    --background-color: hsl(207, 26%, 17%);
+    --elements-color: hsl(209, 23%, 22%);
+    --text-color: white;
+    --filter-icons: invert(1);
+}
+
+header {
+    background-color: var(--elements-color);
+    box-shadow: 1px 1px 9px -5px rgb(0, 0, 0.1);
+}
+
+.headerContent {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 90vw;
+    margin-inline: auto;
+    height: 10vh;
+}
+
+.darkMode {
+    display: flex;
+    width: auto;
+    gap: 4px;
+    justify-content: end;
+    cursor: pointer;
+}
+
+.darkMode img {
+    width: 22px;
+    filter: var(--filter-icons);
+}
+
+.search-filter-functionality {
+    width: 90vw;
+    display: flex;
+    justify-content: space-between;
+    margin: 28px 60px;
+}
+
+.search-filter-functionality .search {
+    width: 350px;
+    height: 8vh;
+    box-shadow: 0px 0px 14px -6px rgb(0, 0, 0.1);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 8px;
+    background-color: var(--elements-color);
+}
+
+.search-filter-functionality .search img {
+    margin-left: 22px;
+    filter: var(--filter-icons);
+}
+
+.search-filter-functionality .search input {
+    border: none;
+    outline: none;
+    width: 295px;
+    height: 8vh;
+    margin-left: 16px;
+    color: inherit;
+    background-color: inherit;
+}
+
+.search-filter-functionality .filter {
+    box-shadow: 0px 0px 14px -6px rgb(0, 0, 0.1);
+}
+
+.search-filter-functionality .filter select {
+    width: 16vw;
+    height: 10vh;
+    border: none;
+    outline: none;
+    padding-inline: 12px;
+    background-color: inherit;
+    color: inherit;
+    cursor: pointer;
+    background-color: var(--elements-color);
+    color: var(--text-color);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 38px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+.cardsContainer {
+    width: 90vw;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 24px;
+}
+
+.cards {
+    width: 18vw;
+    height: 320px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 14px -6px rgb(0, 0, 0.1);
+    transition: transform 0.3s ease;
+    border-radius: 4px;
+    background-color: var(--elements-color);
+}
+
+.cards:hover {
+    transform: scale(1.05);
+}
+
+.cards img {
+    width: 100%;
+}
+
+.countryName {
+    margin: 22px 12px;
+}
+
+.countryDetails {
+    margin: 0 12px;
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.countryDetails p {
+    font-size: 12px;
+}
+
+@media screen and (max-width: 1008px) {
+    .cards {
+        height: fit-content;
+    }
+    .countryDetails {
+        margin-bottom: 22px;
+    }
+}
+
+@media screen and (max-width: 860px) {
+    .search {
+        height: 2vh;
+    }
+    .filter {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 6vh;
+    }
+
+    .cardsContainer {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    header {
+        width: 100vw;
+    }
+
+    .headerContent h1 {
+        font-size: 18px;
+    }
+
+    .headerContent .darkMode h3 {
+        font-size: 16px;
+    }
+
+    .iconFilter{
+        width: 16px !important;
+    }
+
+    .searchFilterWrapper {
+        display: flex;
+        justify-content: center;
+    }
+
+    .search-filter-functionality {
+        flex-direction: column;
+        gap: 36px;
+    }
+
+    .search{
+        height: 3vh;
+    }
+
+    .filter {
+        width: 60vw;
+    }
+
+    #selectField {
+        width: 100%;
+        background-color: var(--elements-color);
+        color: var(--text-color);
+    }
+
+    .cardsContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .cards{
+        width: 75vw;
+        height: fit-content;
+        margin-bottom: 22px;
+    }
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <header>
+            <div class="headerContent">
+                <a href="index.html"
+                    ><h1><b>Where in the world?</b></h1></a
+                >
+                <div class="darkMode">
+                    <img
+                        src="../Icons/moon-outline.svg"
+                        alt="night-mode"
+                        class="iconFilter"
+                    />
+                    <h3 style="font-weight: 600" class="mode">Dark mode</h3>
+                </div>
+            </div>
+        </header>
+        <div class="searchFilterWrapper">
+            <div class="search-filter-functionality">
+                <div class="search">
+                    <img
+                        src="../icons/search.png"
+                        alt="search icon"
+                        width="16px"
+                        class="iconFilter"
+                    />
+                    <input
+                        type="text"
+                        class="searchCountry"
+                        placeholder="Search for country..."
+                    />
+                </div>
+                <div class="filter">
+                    <select id="selectField">
+                        <option value="Filter by region" hidden>Filter by country</option>
+                        <option value="Africa">Africa</option>
+                        <option value="America">America</option>
+                        <option value="Asia">Asia</option>
+                        <option value="Europe">Europe</option>
+                        <option value="Oceania">Oceania</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <main>
+            <div class="cardsContainer"></div>
+        </main>
+        <script src="script.js"></script>
+    </body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="countryU.css" />
+    </head>
+    <body>
+        <header>
+            <div class="headerContent">
+                <h1><b>Where in the world?</b></h1>
+                <div class="buttonWraper">
+                    <img src="/Icons/moon-outline.svg" alt="TheameChangerIcon" width="18px" class="filter" id="theameIcon">
+                    <h3 class="mode">Dark mode</h3>
+                </div>
+            </div>
+        </header>
+        <div class="backBtn">
+            <button id="back" onclick="history.back()"><img src="/Icons/back.png" alt="back-icon" width="16px" class="filter"> Back</button>
+        </div>
+        <main>
+            <div class="content">
+                <div class="leftPartition">
+                    <div class="img">
+                        <img src="" alt="" width="400px" />
+                    </div>
+                </div>
+
+                <div class="rightPartition">
+                    <div class="mainName">
+                        <p><span id="countryName"></span></p>
+                    </div>
+                    <div class="middleDetails">
+                        <div class="detail1">
+                            <p>
+                                <b>Native name:</b>
+                                <span id="nativeName"></span>
+                            </p>
+                            <p>
+                                <b>Population:</b> <span id="Population"></span>
+                            </p>
+                            <p><b>region:</b> <span id="region"></span></p>
+                            <p>
+                                <b>Sub region:</b> <span id="subRegion"></span>
+                            </p>
+                            <p><b>Capital:</b> <span id="capital"></span></p>
+                        </div>
+                        <div class="detail2">
+                            <p>
+                                <b>Top level domain:</b>
+                                <span id="topLevelDomain"></span>
+                            </p>
+                            <p>
+                                <b>curencies:</b> <span id="curencies"></span>
+                            </p>
+                            <p>
+                                <b>language:</b> <span id="languages"> </span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="borderCountries">
+                        <b>Border Countries:</b>
+                        <div id="borderCountries" class="bordersList"></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <script src="country.js"></script>
+    </body>
+</html>
