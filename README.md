@@ -24,11 +24,6 @@ This project helped me understand how real-world APIs work and how to dynamicall
 
 ---
 
-## 📸 Screenshot
-(Add a screenshot of the project here)
-
----
-
 ## 🔗 Live Demo
 (https://countries-explorer-eosin.vercel.app/)
 Example:
